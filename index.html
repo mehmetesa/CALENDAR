@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Karanlık Takvim</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Notion Style Calendar | Flash In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="bg-overlay"></div>
+    <div class="bg-blur"></div>
 
-    <div class="calendar-card">
-        <div class="side-info">
-            <div class="current-time" id="clock">00:00:00</div>
-            <div class="big-day" id="day-number">00</div>
-            <div class="big-month" id="day-name">GÜN</div>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="date-display">
+                <h1 id="selected-day-num">28</h1>
+                <p id="selected-day-name">Aralık Pazar</p>
+            </div>
             
-            <div class="event-add">
-                <input type="text" id="eventInput" placeholder="Etkinlik yaz...">
-                <button onclick="addEvent()">Ekle</button>
+            <div class="event-section">
+                <h3>ETKİNLİKLER</h3>
+                <div id="event-list-display">
+                    </div>
             </div>
-            <ul id="eventList"></ul>
-        </div>
 
-        <div class="calendar-main">
-            <div class="calendar-header">
-                <h2 id="month-year">Ocak 2025</h2>
-                <div class="nav-btns">
-                    <button id="prevMonth">&lt;</button>
-                    <button id="nextMonth">&gt;</button>
-                </div>
+            <div class="add-event-box">
+                <input type="text" id="eventInput" placeholder="Yeni etkinlik...">
+                <button onclick="saveEvent()">Ekle</button>
             </div>
+        </aside>
+
+        <main class="calendar-main">
+            <header class="cal-header">
+                <h2 id="month-year-title">Aralık 2025</h2>
+                <div class="nav">
+                    <button onclick="changeMonth(-1)">&lt;</button>
+                    <button onclick="changeMonth(1)">&gt;</button>
+                </div>
+            </header>
 
             <div class="weekdays">
-                <div>Pzt</div><div>Sal</div><div>Çar</div><div>Per</div><div>Cum</div><div>Cmt</div><div>Paz</div>
+                <span>Pzt</span><span>Sal</span><span>Çar</span><span>Per</span><span>Cum</span><span>Cmt</span><span>Paz</span>
             </div>
 
-            <div class="days-container" id="days-grid"></div>
-        </div>
+            <div class="days-grid" id="days-grid"></div>
+        </main>
     </div>
 
     <script src="script.js"></script>
