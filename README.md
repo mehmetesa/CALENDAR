@@ -2,9 +2,8 @@
 
 Şık, karanlık tema odaklı ve **Notion Calendar** estetiğinden ilham alınarak geliştirilmiş, tamamen işlevsel bir dinamik takvim uygulaması.
 
-🔗 **Canlı Demo:** (https://mehmetesa.github.io/CALANDER/)
+🔗 **Link:** (https://mehmetesa.github.io/CALANDER/)
 
-![Takvim Görünümü](https://images.unsplash.com/photo-1477346611705-65d1883cee1e?q=80&w=400)
 ## ✨ Özellikler
 
 * 🌑 **Modern Dark Mode:** Göz yormayan, derinlik hissi veren karanlık tema ve Glassmorphism (buzlu cam) efekti.
